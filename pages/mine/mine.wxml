@@ -1,0 +1,27 @@
+<view class="root">
+    <view class="passages" >
+        <view class="passages-item" wx:for="{{passages}}" wx:key="index">
+            <view style="margin:15rpx;">{{item.nickName}}</view>
+            <view style="margin:15rpx;color:#888888;">{{item.type + " | " + item.updatedAtStr}}</view>
+            <view style="margin:15rpx;">
+                <text>{{item.content}}</text>
+            </view>
+            <view style="display:flex;">
+                <view wx:for="{{item.images}}" wx:for-item="imagesrc" wx:key="index">
+                    <image style="width:180rpx;height:180rpx;margin:15rpx;" data-item="{{item}}" data-src="{{imagesrc}}" bindtap="previewImage" src="{{imagesrc}}"></image>
+                </view>
+            </view>
+            <view>
+                <button class="passages-button" size="mini" type="warn" data-id="{{item.objectId}}" data-index="{{index}}" bindtap="tapDelete">删除</button>
+                <button class="passages-button" disabled="{{item.todayRefreshed}}" data-id="{{item.objectId}}" bindtap="tapRefresh" size="mini" type="primary">刷新</button>
+                <button class="passages-button" size="mini" type="primary" data-id="{{item.objectId}}" bindtap="tapPassage">查看</button>
+            </view>
+        </view>
+        <view style="display:{{passageFinished?'block':'none'}};padding:20rpx;text-align:center;background:#fff;height:40rpx;">没有更多信息了</view>
+        <button style="display:{{loadingPassages?'block':'none'}};margin-left:-10rpx;width:770rpx;height:80rpx;font-size:34rpx;" plain="true" loading="true" disabled="true">正在加载更多</button>
+        <view style="width:750rpx;height:110rpx;background:#fff;"></view>
+    </view>
+    <view class="top">
+        <button style="margin-top:15rpx;width:700rpx;height:80rpx;font-size:34rpx;" bindtap="submitNewPassage" type="primary">发布新信息</button>
+    </view>
+</view>

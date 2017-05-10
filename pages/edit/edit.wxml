@@ -1,0 +1,24 @@
+<view class="root">
+    <form bindsubmit="submitPassage">
+        <view class="content">
+            <textarea style="padding:26rpx;" name="textarea" maxlength="200" placeholder="请输入您想要发布的内容。。。" placeholder-style="color:#b2b2b2;"/>
+        </view>
+        <view class="images">
+            <view style="padding:15rpx 0 0 15rpx;">添加图片</view>
+            <view style="display:flex;">
+                <view wx:for="{{images}}" wx:key="index">
+                    <image style="width:180rpx;height:180rpx;margin:15rpx;" src="{{item}}"></image>
+                </view>
+                <view class="images-addimg" wx:if="{{images.length!=3}}" bindtap="addImage" hover="true" hover-class="images-addimg-hover">
+                    <image style="width:180rpx;height:180rpx;" src="../../res/addimg.png"></image>
+                </view>
+            </view>
+        </view> 
+        <picker bindchange="bindTypeChange" value="{{selectedType}}" range="{{type}}">
+            <view class="type" hover="true" hover-class="type-hover">
+                选择分类:{{type[selectedType]}}
+            </view>
+        </picker>
+        <button style="margin:30rpx;" type="primary" loading="{{submitting}}" disabled="{{submitting}}" form-type="submit">{{submitting ? '提交中...' : '提交'}}</button>
+    </form>
+</view>

@@ -1,0 +1,19 @@
+<view style="display:{{succeed?'block':'none'}};font-family:simhei;font-size:26rpx;margin:0 0 15rpx 0;padding:20rpx;background:#fff">
+    <view style="margin:15rpx;">{{item.nickName}}</view>
+    <view style="margin:15rpx;color:#888888;">{{item.type + " | " + item.updatedAtStr}}</view>
+    <view style="margin:15rpx;">
+        <text>{{item.content}}</text>
+    </view>
+    <view style="display:flex;">
+        <view wx:for="{{item.images}}" wx:for-item="imagesrc" wx:key="index">
+            <image style="width:180rpx;height:180rpx;margin:15rpx;" data-item="{{item}}" data-src="{{imagesrc}}" bindtap="previewImage" src="{{imagesrc}}"></image>
+        </view>
+    </view>
+</view>
+<view style="display:{{succeed?'none':'block'}};font-family:simhei;font-size:34rpx;text-align:center;margin-top:30rpx;">
+    此信息已被删除，返回查看更多信息。
+</view>
+<view style="width:750rpx;height:110rpx;background:#fff;"></view>
+<view class="top">
+    <button style="margin-top:15rpx;width:700rpx;height:80rpx;font-size:34rpx;" bindtap="goHome" type="primary">去主页</button>
+</view>

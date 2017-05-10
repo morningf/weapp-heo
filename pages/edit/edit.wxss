@@ -1,0 +1,41 @@
+.root{
+  font-family: simhei;
+  font-size: 34rpx;
+  color: #353535;
+  background: #eee;
+  height: 100vh;
+}
+
+.content{
+    background: #fff;
+    border: 0.5rpx solid #eee;
+}
+
+.images{
+    background: #fff;
+    margin: 20rpx 0 20rpx 0;
+    padding: 20rpx;
+}
+.images-addimg{
+    margin: 15rpx;
+    width: 180rpx;
+    height: 180rpx;
+    /*background-image:url('../../res/addimg.png');
+    background-size: 100% 100%;*/
+}
+.images-addimg-hover{
+    background: #eee;
+    /*background-image:url('../../res/addimg.png');
+    background-size: 100% 100%;*/
+}
+
+.type{
+    padding: 15rpx;
+    background: #fff;
+    border: 0.5rpx solid #fff;
+}
+.type-hover{
+    padding: 15rpx;
+    background: #eee;
+    border: 0.5rpx solid #fff;
+}

@@ -1,0 +1,39 @@
+.root{
+  font-family: simhei;
+  font-size: 30rpx;
+  color: #353535;
+  background: #eee;
+}
+
+.top{
+  position:fixed;
+  background: #eee;
+  height:70rpx;
+  width:752rpx;
+  top:-1rpx;
+  left:-1rpx;
+}
+.top-picker{
+  position:fixed;
+  background: #fff;
+  height:60rpx;
+  line-height:60rpx;
+  width:752rpx;
+  top:10rpx;
+  left:-1rpx;
+  padding-left:50rpx;
+}
+
+.top-hover{
+  background: #eee;
+}
+
+.passages{
+  padding-top: 80rpx;
+}
+.passages-item{  
+  font-size: 26rpx;
+  margin: 0 0 15rpx 0;
+  padding: 20rpx;
+  background: #fff;
+}

@@ -1,0 +1,26 @@
+.root{
+  font-family: simhei;
+  font-size: 30rpx;
+  color: #353535;
+  background: #eee;
+}
+.top{
+    position:fixed;
+    background: #eee;
+    height:110rpx;
+    width:752rpx;
+    bottom: -1rpx;
+    left:-1rpx;
+}
+
+.passages{
+}
+.passages-item{  
+  font-size: 26rpx;
+  margin: 0 0 15rpx 0;
+  padding: 20rpx;
+  background: #fff;
+}
+.passages-button{
+    margin:10rpx;
+}

@@ -1,0 +1,8 @@
+.top{
+    position:fixed;
+    background: #eee;
+    height:110rpx;
+    width:752rpx;
+    bottom: -1rpx;
+    left:-1rpx;
+}
